@@ -1,13 +1,10 @@
 # Java_Evolutionary_Genetics_Simulation
 
 Genetics Simulation Project
-Overview
-It is a Java Web Based project that used the Open Source Code – Genetic Algorithm Hello World (https://github.com/jsvazic/GAHelloWorld) 
-For more GAHelloWorld details, open: https://github.com/jsvazic/GAHelloWorld/blob/master/README.md
 
-Project Overview:
-    How to use: 
-        Input fields (right half)
+# Project Overview:
+## How to use: 
+        - Input fields (right half)
                 Target Gene: The gene being selective for (genetic end goal of selection)
                         Should consist of A,T,C and G’s (DNA base pairs) 
                 Tournament Size: Degree of selective pressure, randomly sampled chromosomes to compete to see which is closest to target gene (the larger the tournament size, the faster genes will likely fix towards the target gene due to less drift)
@@ -22,13 +19,13 @@ Project Overview:
                 Mutation Ratio: Degree at which genetic information is changed within the lifetime of an individual in the species 
                         Positive decimal between 0 and 1  
                         
-Results:
-        Generation #: Number of generations it takes before a sequence within the genome reaches the target gene
-        Gene Code: Gene code of closest chunk per generation
-        Fitness: Measure of how close the gene code displayed is to the target gene
+## Results:
+        - Generation #: Number of generations it takes before a sequence within the genome reaches the target gene
+        - Gene Code: Gene code of closest chunk per generation
+        - Fitness: Measure of how close the gene code displayed is to the target gene
 
 
-How to make it run on your computer: 
+## How to make it run on your computer: 
 1.    Generation of the .war file (This step already done for you, GeneticsSimulation.war should already be in the zip folder). But in case you’re curious how to use eclipse to generate the .war file, refer to a-g below. 
     a.    Make sure that your project is imported successfully in Eclipse
     b.    Right click on the Dynamic Web Project
@@ -45,7 +42,7 @@ How to make it run on your computer:
     a.    FYI port 8080 is the default port of Tomcat servers
 6.    To stop the server again, execute “./catalina.sh stop” in the <TOMCAT_HOME>/bin folder
 
-Code Explanation: 
+## Code Explanation: 
     Technology used:
         Java (most came from GAHelloWorld)
         JSP – Java Servlet Pages. This is for the main program. It is the one who invokes the methods from the GAHelloWorld. 
@@ -55,7 +52,7 @@ Code Explanation:
         Tomcat Server – used to run the web application
         Eclipse – used IDE to develop the web application
 
-Project Roadmap – we used the standard web based project structure. Containing the build folder for the built java sources, src for the folder of java files and WebContent folder for the HTML, img, css files to be deployed in the web server.FYI class files are the file extension of a built java object.
+## Project Roadmap – we used the standard web based project structure. Containing the build folder for the built java sources, src for the folder of java files and WebContent folder for the HTML, img, css files to be deployed in the web server.FYI class files are the file extension of a built java object.
 
 All of the folders above are automatically generated if you try to create a new Dynamic Web Application in Eclipse.
 The following folders are that I created because they weren’t automatically generated. 
@@ -76,7 +73,7 @@ The Chromosome and Population java files are within a lot of folders, because th
 
 
 
-Code Written/Changed
+## Code Written/Changed
 Index.jsp – this is the main file. Since this should be a small and simple program, I have used this jsp to serve as the View (User Interface) and Controller (The one that does the logic, processes etc.). They are usually separated but this makes things quicker. It consisted of regular HTML codes for the Front end (User interface, etc) and Java codes which reside within <% %> snippets to do processes computations and also to use the said Chromosome and Population Java files from GAHelloWorld. All the contents in this file is original.
 Chromosome.java – this file came from GAHelloWorld but I have made some changes to cater to the needs of our application. Here are the following changes:
     Line 49: TARGET_GENE – it was initially Hello World but changed it to ATCGATGGCAAAGTACGATG. Also the object is final initially. I removed it so that we could also make it as an additional variable for our application
@@ -93,7 +90,9 @@ Population.java – this file came also from GAHelloWorld but I have made some c
     .classpath – this is a file that lists all the internal/external references of a project. – automatically generated
     .project – this file serves as your id whenever you’ll try to import/export your project to different machines. With this file, you will able to let other eclipse software use/develop your project with ease.  
 
-
+## Credits:
+It is a Java Web Based project that used the Open Source Code – Genetic Algorithm Hello World (https://github.com/jsvazic/GAHelloWorld) 
+For more GAHelloWorld details, open: https://github.com/jsvazic/GAHelloWorld/blob/master/README.md
 
 
 
